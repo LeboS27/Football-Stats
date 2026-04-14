@@ -96,8 +96,12 @@ export class FootballData {
       headers: this._headers,
     });
 
+    if (res.status === 429) {
+      throw new Error('RATE_LIMIT');
+    }
+
     if (!res.ok) {
-      throw new Error(`API-Football error ${res.status}: ${res.statusText}`);
+      throw new Error(`API error ${res.status}: ${res.statusText}`);
     }
 
     const json = await res.json();

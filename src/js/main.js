@@ -204,8 +204,11 @@ async function loadLeagueData(leagueId) {
 
   } catch (err) {
     console.error('loadLeagueData:', err);
-    if (fixturesEl) showError(fixturesEl);
-    if (recentEl)   showError(recentEl);
+    const msg = err.message === 'RATE_LIMIT'
+      ? 'API daily limit reached — data will load again after midnight UTC. ⏳'
+      : 'Unable to load data. Please try again later.';
+    if (fixturesEl) showError(fixturesEl, msg);
+    if (recentEl)   showError(recentEl,   msg);
   }
 }
 

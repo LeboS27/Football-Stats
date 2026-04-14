@@ -105,6 +105,9 @@ export async function renderStandings(fd, leagueId, container, season) {
 
   } catch (err) {
     console.error('renderStandings:', err);
-    showError(container);
+    const msg = err.message === 'RATE_LIMIT'
+      ? 'API daily limit reached — data will load again after midnight UTC. ⏳'
+      : 'Unable to load data. Please try again later.';
+    showError(container, msg);
   }
 }
