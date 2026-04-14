@@ -21,15 +21,17 @@ const BASE_URL = 'https://free-api-live-football-data.p.rapidapi.com';
 const API_KEY  = import.meta.env.VITE_FOOTBALL_API_KEY;
 const SEASON   = import.meta.env.VITE_DEFAULT_SEASON ?? '2024';
 
-/** Cache TTL constants (milliseconds). */
+/** Cache TTL constants (milliseconds).
+ *  Kept long to stay within the free-tier quota (limited daily requests).
+ */
 const TTL = {
-  LIVE:        60_000,          // 1 minute  — live match data
-  FIXTURES:    5 * 60_000,      // 5 minutes — today's fixtures
-  STANDINGS:   60 * 60_000,     // 1 hour    — standings
-  LEADERBOARD: 60 * 60_000,     // 1 hour    — top scorers / assists
-  PLAYER:      24 * 3_600_000,  // 24 hours  — player profiles
-  TEAM:        24 * 3_600_000,  // 24 hours  — team stats
-  HISTORICAL:  24 * 3_600_000,  // 24 hours  — H2H, past fixtures
+  LIVE:        5 * 60_000,      // 5 minutes  — live match data
+  FIXTURES:    30 * 60_000,     // 30 minutes — today's fixtures
+  STANDINGS:   6 * 3_600_000,   // 6 hours    — standings
+  LEADERBOARD: 6 * 3_600_000,   // 6 hours    — top scorers / assists
+  PLAYER:      24 * 3_600_000,  // 24 hours   — player profiles
+  TEAM:        24 * 3_600_000,  // 24 hours   — team stats
+  HISTORICAL:  24 * 3_600_000,  // 24 hours   — H2H, past fixtures
 };
 
 export class FootballData {
