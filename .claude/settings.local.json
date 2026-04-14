@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(curl -s --request GET \"https://free-api-live-football-data.p.rapidapi.com/football-get-standing-all?leagueid=39\" --header \"x-rapidapi-host: free-api-live-football-data.p.rapidapi.com\" --header \"x-rapidapi-key: 4daab8c96fmshd1c301b640792c1p135f18jsnd9cb1ef55afa\")",
+      "Bash(curl -s --request GET \"https://free-api-live-football-data.p.rapidapi.com/football-get-matches-by-date-and-league?date=20260413&leagueid=39\" --header \"x-rapidapi-host: free-api-live-football-data.p.rapidapi.com\" --header \"x-rapidapi-key: 4daab8c96fmshd1c301b640792c1p135f18jsnd9cb1ef55afa\")",
+      "Bash(curl -s --request GET \"https://free-api-live-football-data.p.rapidapi.com/football-get-standing-all?leagueid=47\" --header \"x-rapidapi-host: free-api-live-football-data.p.rapidapi.com\" --header \"x-rapidapi-key: 4daab8c96fmshd1c301b640792c1p135f18jsnd9cb1ef55afa\")",
+      "Bash(curl -s --request GET \"https://free-api-live-football-data.p.rapidapi.com/football-get-all-leagues\" --header \"x-rapidapi-host: free-api-live-football-data.p.rapidapi.com\" --header \"x-rapidapi-key: 4daab8c96fmshd1c301b640792c1p135f18jsnd9cb1ef55afa\")",
+      "Bash(python3 -c \"import sys,json; data=json.load\\(sys.stdin\\); leagues=data.get\\('response',{}\\).get\\('leagues', data.get\\('response',[]\\)\\); [print\\(l.get\\('id'\\), l.get\\('name',''\\), l.get\\('ccode',''\\)\\) for l in \\(leagues if isinstance\\(leagues,list\\) else []\\) if any\\(x in str\\(l.get\\('name',''\\)\\) for x in ['Premier','La Liga','Serie','Bundesliga','Ligue 1','Champions']\\)]\")",
+      "Bash(python3 -c ':*)",
+      "Bash(curl -s --request GET \"https://free-api-live-football-data.p.rapidapi.com/football-get-matches-by-date?date=20260413\" --header \"x-rapidapi-host: free-api-live-football-data.p.rapidapi.com\" --header \"x-rapidapi-key: 4daab8c96fmshd1c301b640792c1p135f18jsnd9cb1ef55afa\")",
+      "Bash(curl -s --request GET \"https://free-api-live-football-data.p.rapidapi.com/football-get-all-matches-by-league?leagueid=47\" --header \"x-rapidapi-host: free-api-live-football-data.p.rapidapi.com\" --header \"x-rapidapi-key: 4daab8c96fmshd1c301b640792c1p135f18jsnd9cb1ef55afa\")",
+      "Bash(curl -s \"https://free-api-live-football-data.p.rapidapi.com/football-get-player-news?playerid=292462&page=1\" --header \"x-rapidapi-host: free-api-live-football-data.p.rapidapi.com\" --header \"x-rapidapi-key: 4daab8c96fmshd1c301b640792c1p135f18jsnd9cb1ef55afa\")",
+      "Bash(curl -s \"https://free-api-live-football-data.p.rapidapi.com/football-get-list-player?teamid=8650\" --header \"x-rapidapi-host: free-api-live-football-data.p.rapidapi.com\" --header \"x-rapidapi-key: 4daab8c96fmshd1c301b640792c1p135f18jsnd9cb1ef55afa\")"
+    ]
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "name": "football-stats-dashboard",
+  "version": "1.0.0",
+  "description": "A dynamic, data-rich football statistics single-page web application aggregating live scores, team stats, player profiles, and betting trends from API-Football.",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^5.0.0"
+  }
+}

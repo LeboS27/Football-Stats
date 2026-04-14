@@ -1,0 +1,8 @@
+[
+  { "id": 47,  "name": "Premier League",       "country": "England", "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿", "logo": "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/47.png"  },
+  { "id": 87,  "name": "La Liga",              "country": "Spain",   "flag": "🇪🇸", "logo": "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/87.png"  },
+  { "id": 55,  "name": "Serie A",              "country": "Italy",   "flag": "🇮🇹", "logo": "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/55.png"  },
+  { "id": 54,  "name": "Bundesliga",           "country": "Germany", "flag": "🇩🇪", "logo": "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/54.png"  },
+  { "id": 53,  "name": "Ligue 1",              "country": "France",  "flag": "🇫🇷", "logo": "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/53.png"  },
+  { "id": 526, "name": "CAF Champions League", "country": "Africa",  "flag": "🌍", "logo": "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/526.png" }
+]
